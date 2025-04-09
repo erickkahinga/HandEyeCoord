@@ -29,9 +29,22 @@
 		69AC429D2DA32DB1002A8D9D /* LidarModelApp2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LidarModelApp2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		69AC42EB2DA60611002A8D9D /* Exceptions for "LidarModelApp2" folder in "LidarModelApp2" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 69AC42852DA32DB0002A8D9D /* LidarModelApp2 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		69AC42882DA32DB0002A8D9D /* LidarModelApp2 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				69AC42EB2DA60611002A8D9D /* Exceptions for "LidarModelApp2" folder in "LidarModelApp2" target */,
+			);
 			path = LidarModelApp2;
 			sourceTree = "<group>";
 		};
@@ -398,6 +411,9 @@
 				DEVELOPMENT_TEAM = 7U8KP3Y9L7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LidarModelApp2/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "ay bruh man, u got that bluetooth, I am lookin at u dawson";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Yo can I use ur camera plzz ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -427,6 +443,9 @@
 				DEVELOPMENT_TEAM = 7U8KP3Y9L7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LidarModelApp2/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "ay bruh man, u got that bluetooth, I am lookin at u dawson";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Yo can I use ur camera plzz ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

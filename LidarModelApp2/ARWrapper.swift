@@ -8,6 +8,8 @@
 import SwiftUI
 import RealityKit
 import ARKit
+import Foundation
+import CoreBluetooth
 
 struct ARWrapper: UIViewRepresentable {
     @Binding var submittedExportRequest: Bool
@@ -67,6 +69,9 @@ struct ARWrapper: UIViewRepresentable {
 }
 
 class ExportViewModel: NSObject, ObservableObject, ARSessionDelegate {
+    
+    let bluetooth = BluetoothManager()
+
     
     func convertToAsset(meshAnchor: [ARMeshAnchor], camera: ARCamera) -> MDLAsset? {
         guard let device = MTLCreateSystemDefaultDevice() else {
@@ -191,6 +196,9 @@ class ExportViewModel: NSObject, ObservableObject, ARSessionDelegate {
             
             grid.append(column)
         }
+        
+        bluetooth.sendDepthGrid(grid)
+
 
 
 
