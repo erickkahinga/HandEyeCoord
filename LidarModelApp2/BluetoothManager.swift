@@ -9,7 +9,7 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     private var depthCharacteristic: CBCharacteristic?
 
     // Replace with the UUIDs you're using on the ESP32 side
-    let serviceUUID = CBUUID(string: "19c9a695-ea36-477b-9aa0-832d8b3b559a")
+    let serviceUUID = CBUUID(string:  "12345678-1234-1234-1234-123456789ABC")
     let characteristicUUID = CBUUID(string:  "0c857149-c4fb-43ba-b0dc-7ecf72de141e")
 
     override init() {
@@ -108,7 +108,7 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         }
 
         let data = Data(byteArray)
-        peripheral.writeValue(data, for: characteristic, type: .withoutResponse)
+        peripheral.writeValue(data, for: characteristic, type: .withResponse)
         print("📤 Sent grid: \(byteArray)")
     }
 }

@@ -71,6 +71,9 @@ struct ARWrapper: UIViewRepresentable {
 class ExportViewModel: NSObject, ObservableObject, ARSessionDelegate {
     
     let bluetooth = BluetoothManager()
+    
+    private var lastSendTime = Date.distantPast
+    private let sendInterval: TimeInterval = 1
 
     
     func convertToAsset(meshAnchor: [ARMeshAnchor], camera: ARCamera) -> MDLAsset? {
@@ -113,43 +116,15 @@ class ExportViewModel: NSObject, ObservableObject, ARSessionDelegate {
     
     //-----------------------------------------------------
     
-//    func session(_ session: ARSession, didUpdate frame: ARFrame) {
-//        guard let depthMap = frame.sceneDepth?.depthMap else {
-//            print("No depth map")
-//            return
-//        }
-//
-//        let width = CVPixelBufferGetWidth(depthMap)
-//        let height = CVPixelBufferGetHeight(depthMap)
-//
-//        CVPixelBufferLockBaseAddress(depthMap, .readOnly)
-//        defer { CVPixelBufferUnlockBaseAddress(depthMap, .readOnly) }
-//
-//        let floatBuffer = unsafeBitCast(CVPixelBufferGetBaseAddress(depthMap), to: UnsafeMutablePointer<Float32>.self)
-//
-//        // Downsample grid (e.g., every 10 pixels)
-//        let step = 10
-//        var grid: [[Float]] = []
-//
-//        for y in stride(from: 0, to: height, by: step) {
-//            var row: [Float] = []
-//            for x in stride(from: 0, to: width, by: step) {
-//                let depth = floatBuffer[y * width + x]
-//                row.append(depth.isNaN ? 0.0 : depth)
-//            }
-//            grid.append(row)
-//        }
-//
-//        print("📏 Depth Grid (in meters):")
-//            for row in grid {
-//                let formattedRow = row.map { String(format: "%.2f", $0) }.joined(separator: "\t")
-//                print(formattedRow)
-//            }
-//    }
-    
+
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         guard let depthMap = frame.sceneDepth?.depthMap else {
             print("No depth map")
+            return
+        }
+        
+        let now = Date()
+        guard now.timeIntervalSince(lastSendTime) > sendInterval else {
             return
         }
 
@@ -221,6 +196,11 @@ class ExportViewModel: NSObject, ObservableObject, ARSessionDelegate {
 //            let formatted = row.map { String(format: "%.2f", $0) }.joined(separator: "\t")
 //            print(formatted)
 //        }
+        
+        bluetooth.sendDepthGrid(grid)
+        lastSendTime = now
+
+
     }
 
 }
