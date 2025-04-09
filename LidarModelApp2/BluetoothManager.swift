@@ -9,8 +9,8 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     private var depthCharacteristic: CBCharacteristic?
 
     // Replace with the UUIDs you're using on the ESP32 side
-    let serviceUUID = CBUUID(string: "12345678-1234-5678-1234-56789abcdef0")
-    let characteristicUUID = CBUUID(string: "abcdef12-3456-7890-abcd-ef1234567890")
+    let serviceUUID = CBUUID(string: "19c9a695-ea36-477b-9aa0-832d8b3b559a")
+    let characteristicUUID = CBUUID(string:  "0c857149-c4fb-43ba-b0dc-7ecf72de141e")
 
     override init() {
         super.init()
@@ -22,7 +22,8 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
             print("🔍 Scanning for peripherals...")
-            centralManager.scanForPeripherals(withServices: [serviceUUID], options: nil)
+            centralManager.scanForPeripherals(withServices: nil, options: nil)
+
         } else {
             print("❌ Bluetooth not available")
         }
@@ -32,18 +33,27 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                         didDiscover peripheral: CBPeripheral,
                         advertisementData: [String : Any],
                         rssi RSSI: NSNumber) {
-        print("✅ Found peripheral: \(peripheral.name ?? "Unknown")")
-        centralManager.stopScan()
-        targetPeripheral = peripheral
-        targetPeripheral?.delegate = self
-        centralManager.connect(peripheral, options: nil)
+        
+        let name = peripheral.name ?? "Unnamed"
+        print("\n🔎 Discovered peripheral: \(name)")
+        print("📡 RSSI: \(RSSI)")
+        print("📦 Advertisement Data: \(advertisementData)")
+
+        // ✅ Connect to the specific ESP32 by name
+        if name == "HandEyeESP32" {
+            print("✅ Connecting to: \(name)")
+            centralManager.stopScan()
+            targetPeripheral = peripheral
+            targetPeripheral?.delegate = self
+            centralManager.connect(peripheral, options: nil)
+        }
     }
 
     func centralManager(_ central: CBCentralManager,
-                        didConnect peripheral: CBPeripheral) {
-        print("🔗 Connected to \(peripheral.name ?? "ESP32")")
-        peripheral.discoverServices([serviceUUID])
-    }
+                            didConnect peripheral: CBPeripheral) {
+            print("🔗 Connected to \(peripheral.name ?? "ESP32")")
+            peripheral.discoverServices([serviceUUID])
+        }
 
     func peripheral(_ peripheral: CBPeripheral,
                     didDiscoverServices error: Error?) {
@@ -55,6 +65,8 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         }
     }
 
+    var isReadyToSend = false
+
     func peripheral(_ peripheral: CBPeripheral,
                     didDiscoverCharacteristicsFor service: CBService,
                     error: Error?) {
@@ -63,20 +75,25 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
             if characteristic.uuid == characteristicUUID {
                 print("✅ Ready to write to characteristic")
                 depthCharacteristic = characteristic
+                isReadyToSend = true
             }
         }
     }
 
+
     // MARK: - Write Grid
 
     func sendDepthGrid(_ grid: [[Float]]) {
-        guard let peripheral = targetPeripheral,
+        
+        guard isReadyToSend,
+              let peripheral = targetPeripheral,
               let characteristic = depthCharacteristic else {
-            print("❌ Not connected or characteristic not ready")
+            print("❌ Not ready to send")
             return
         }
+        
 
-        // Flatten the 3x3 grid
+        // Flatten the 3x4 grid
         let values = grid.flatMap { $0 }
 
         // Normalize to 0–255 (1 byte per cell)

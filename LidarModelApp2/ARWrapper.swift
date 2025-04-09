@@ -165,7 +165,13 @@ class ExportViewModel: NSObject, ObservableObject, ARSessionDelegate {
         let sectionWidth = width / 3
         let sectionHeight = height / 3
 
-        var grid: [[Float]] = []
+        var grid: [[Float]] = [
+            
+        ]
+        let topRow: [Float] = [0.0, 0.0, 0.0]
+        grid.append(topRow)
+        
+
 
         for col in 0..<3 {  // left to right
             var column: [Float] = []
@@ -197,17 +203,24 @@ class ExportViewModel: NSObject, ObservableObject, ARSessionDelegate {
             grid.append(column)
         }
         
-        bluetooth.sendDepthGrid(grid)
+       let col1Avg = (grid[1][0] + grid[2][0] + grid[3][0]) / Float(3)
+       grid[0][0] = col1Avg
+
+       // Calculate average for column 3 (grid[3])
+       let col3Avg = (grid[1][2] + grid[2][2] + grid[3][2]) / Float(3)
+       grid[0][2] = col3Avg
+        
+        
 
 
 
 
-        // Pretty print the 3x3 grid
-        print("📏 3×3 Depth Grid (meters):")
-        for row in grid {
-            let formatted = row.map { String(format: "%.2f", $0) }.joined(separator: "\t")
-            print(formatted)
-        }
+//         Pretty print the 3x4 grid
+//        print("📏 3×4 Depth Grid (meters):")
+//        for row in grid {
+//            let formatted = row.map { String(format: "%.2f", $0) }.joined(separator: "\t")
+//            print(formatted)
+//        }
     }
 
 }
