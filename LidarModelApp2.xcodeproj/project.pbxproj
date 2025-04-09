@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		69AC42942DA32DB1002A8D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69AC427E2DA32DB0002A8D9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69AC42852DA32DB0002A8D9D;
+			remoteInfo = LidarModelApp2;
+		};
+		69AC429E2DA32DB1002A8D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69AC427E2DA32DB0002A8D9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69AC42852DA32DB0002A8D9D;
+			remoteInfo = LidarModelApp2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69AC42862DA32DB0002A8D9D /* LidarModelApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LidarModelApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69AC42932DA32DB1002A8D9D /* LidarModelApp2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LidarModelApp2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69AC429D2DA32DB1002A8D9D /* LidarModelApp2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LidarModelApp2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		69AC42882DA32DB0002A8D9D /* LidarModelApp2 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LidarModelApp2;
+			sourceTree = "<group>";
+		};
+		69AC42962DA32DB1002A8D9D /* LidarModelApp2Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LidarModelApp2Tests;
+			sourceTree = "<group>";
+		};
+		69AC42A02DA32DB1002A8D9D /* LidarModelApp2UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LidarModelApp2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69AC42832DA32DB0002A8D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69AC42902DA32DB1002A8D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69AC429A2DA32DB1002A8D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69AC427D2DA32DB0002A8D9D = {
+			isa = PBXGroup;
+			children = (
+				69AC42882DA32DB0002A8D9D /* LidarModelApp2 */,
+				69AC42962DA32DB1002A8D9D /* LidarModelApp2Tests */,
+				69AC42A02DA32DB1002A8D9D /* LidarModelApp2UITests */,
+				69AC42872DA32DB0002A8D9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69AC42872DA32DB0002A8D9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69AC42862DA32DB0002A8D9D /* LidarModelApp2.app */,
+				69AC42932DA32DB1002A8D9D /* LidarModelApp2Tests.xctest */,
+				69AC429D2DA32DB1002A8D9D /* LidarModelApp2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69AC42852DA32DB0002A8D9D /* LidarModelApp2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69AC42A72DA32DB1002A8D9D /* Build configuration list for PBXNativeTarget "LidarModelApp2" */;
+			buildPhases = (
+				69AC42822DA32DB0002A8D9D /* Sources */,
+				69AC42832DA32DB0002A8D9D /* Frameworks */,
+				69AC42842DA32DB0002A8D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				69AC42882DA32DB0002A8D9D /* LidarModelApp2 */,
+			);
+			name = LidarModelApp2;
+			packageProductDependencies = (
+			);
+			productName = LidarModelApp2;
+			productReference = 69AC42862DA32DB0002A8D9D /* LidarModelApp2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69AC42922DA32DB1002A8D9D /* LidarModelApp2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69AC42AA2DA32DB1002A8D9D /* Build configuration list for PBXNativeTarget "LidarModelApp2Tests" */;
+			buildPhases = (
+				69AC428F2DA32DB1002A8D9D /* Sources */,
+				69AC42902DA32DB1002A8D9D /* Frameworks */,
+				69AC42912DA32DB1002A8D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69AC42952DA32DB1002A8D9D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				69AC42962DA32DB1002A8D9D /* LidarModelApp2Tests */,
+			);
+			name = LidarModelApp2Tests;
+			packageProductDependencies = (
+			);
+			productName = LidarModelApp2Tests;
+			productReference = 69AC42932DA32DB1002A8D9D /* LidarModelApp2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		69AC429C2DA32DB1002A8D9D /* LidarModelApp2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69AC42AD2DA32DB1002A8D9D /* Build configuration list for PBXNativeTarget "LidarModelApp2UITests" */;
+			buildPhases = (
+				69AC42992DA32DB1002A8D9D /* Sources */,
+				69AC429A2DA32DB1002A8D9D /* Frameworks */,
+				69AC429B2DA32DB1002A8D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69AC429F2DA32DB1002A8D9D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				69AC42A02DA32DB1002A8D9D /* LidarModelApp2UITests */,
+			);
+			name = LidarModelApp2UITests;
+			packageProductDependencies = (
+			);
+			productName = LidarModelApp2UITests;
+			productReference = 69AC429D2DA32DB1002A8D9D /* LidarModelApp2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69AC427E2DA32DB0002A8D9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					69AC42852DA32DB0002A8D9D = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					69AC42922DA32DB1002A8D9D = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 69AC42852DA32DB0002A8D9D;
+					};
+					69AC429C2DA32DB1002A8D9D = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 69AC42852DA32DB0002A8D9D;
+					};
+				};
+			};
+			buildConfigurationList = 69AC42812DA32DB0002A8D9D /* Build configuration list for PBXProject "LidarModelApp2" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69AC427D2DA32DB0002A8D9D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 69AC42872DA32DB0002A8D9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69AC42852DA32DB0002A8D9D /* LidarModelApp2 */,
+				69AC42922DA32DB1002A8D9D /* LidarModelApp2Tests */,
+				69AC429C2DA32DB1002A8D9D /* LidarModelApp2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69AC42842DA32DB0002A8D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69AC42912DA32DB1002A8D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69AC429B2DA32DB1002A8D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69AC42822DA32DB0002A8D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69AC428F2DA32DB1002A8D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69AC42992DA32DB1002A8D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69AC42952DA32DB1002A8D9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69AC42852DA32DB0002A8D9D /* LidarModelApp2 */;
+			targetProxy = 69AC42942DA32DB1002A8D9D /* PBXContainerItemProxy */;
+		};
+		69AC429F2DA32DB1002A8D9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69AC42852DA32DB0002A8D9D /* LidarModelApp2 */;
+			targetProxy = 69AC429E2DA32DB1002A8D9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		69AC42A52DA32DB1002A8D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69AC42A62DA32DB1002A8D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69AC42A82DA32DB1002A8D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U8KP3Y9L7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Yo can I use ur camera plzz ";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andregrossberg.LidarModelApp2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69AC42A92DA32DB1002A8D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U8KP3Y9L7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Yo can I use ur camera plzz ";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andregrossberg.LidarModelApp2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69AC42AB2DA32DB1002A8D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andregrossberg.LidarModelApp2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LidarModelApp2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LidarModelApp2";
+			};
+			name = Debug;
+		};
+		69AC42AC2DA32DB1002A8D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andregrossberg.LidarModelApp2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LidarModelApp2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LidarModelApp2";
+			};
+			name = Release;
+		};
+		69AC42AE2DA32DB1002A8D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andregrossberg.LidarModelApp2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LidarModelApp2;
+			};
+			name = Debug;
+		};
+		69AC42AF2DA32DB1002A8D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andregrossberg.LidarModelApp2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LidarModelApp2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69AC42812DA32DB0002A8D9D /* Build configuration list for PBXProject "LidarModelApp2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69AC42A52DA32DB1002A8D9D /* Debug */,
+				69AC42A62DA32DB1002A8D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69AC42A72DA32DB1002A8D9D /* Build configuration list for PBXNativeTarget "LidarModelApp2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69AC42A82DA32DB1002A8D9D /* Debug */,
+				69AC42A92DA32DB1002A8D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69AC42AA2DA32DB1002A8D9D /* Build configuration list for PBXNativeTarget "LidarModelApp2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69AC42AB2DA32DB1002A8D9D /* Debug */,
+				69AC42AC2DA32DB1002A8D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69AC42AD2DA32DB1002A8D9D /* Build configuration list for PBXNativeTarget "LidarModelApp2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69AC42AE2DA32DB1002A8D9D /* Debug */,
+				69AC42AF2DA32DB1002A8D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69AC427E2DA32DB0002A8D9D /* Project object */;
+}
