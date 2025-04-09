@@ -157,19 +157,42 @@ class ExportViewModel: NSObject, ObservableObject, ARSessionDelegate {
         let floatBuffer = unsafeBitCast(CVPixelBufferGetBaseAddress(depthMap), to: UnsafeMutablePointer<Float32>.self)
 
         // Define 3x3 sampling points
-        let sampleXs = [width / 6, width / 2, (width * 5) / 6]
-        let sampleYs = [height / 6, height / 2, (height * 5) / 6]
+        let sectionWidth = width / 3
+        let sectionHeight = height / 3
 
         var grid: [[Float]] = []
 
-        for y in sampleYs {
-            var row: [Float] = []
-            for x in sampleXs {
-                let depth = floatBuffer[y * width + x]
-                row.append(depth.isNaN ? 0.0 : depth)
+        for col in 0..<3 {  // left to right
+            var column: [Float] = []
+            
+            for row in (0..<3).reversed() {  // top to bottom
+                var sum: Float = 0
+                var count: Int = 0
+
+                let startX = col * sectionWidth
+                let endX = (col == 2) ? width : (startX + sectionWidth)
+
+                let startY = row * sectionHeight
+                let endY = (row == 2) ? height : (startY + sectionHeight)
+
+                for y in startY..<endY {
+                    for x in startX..<endX {
+                        let depth = floatBuffer[y * width + x]
+                        if depth.isFinite && depth > 0 {
+                            sum += depth
+                            count += 1
+                        }
+                    }
+                }
+
+                let avg = count > 0 ? sum / Float(count) : 0.0
+                column.append(avg)
             }
-            grid.append(row)
+            
+            grid.append(column)
         }
+
+
 
         // Pretty print the 3x3 grid
         print("📏 3×3 Depth Grid (meters):")
